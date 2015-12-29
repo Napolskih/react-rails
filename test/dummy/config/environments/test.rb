@@ -9,7 +9,8 @@ Dummy::Application.configure do
   # we need this to reload the jsx transformer when different version is dropped in
   config.cache_classes = false
   config.reload_plugins = true
-  config.assets.cache_store = :null_store
+  #config.assets.cache_store = :null_store
+  config.assets.cache_store = :memory_store
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
