@@ -36,7 +36,8 @@ end
 # so override `fresh?` to mark it as expired.
 def manually_expire_asset(asset_name)
   asset = Rails.application.assets[asset_name]
-  def asset.fresh?(env); false; end
+  #def asset.fresh?(env); false; end
+  def asset.fresh?; false; end
 end
 
 # Load support files
